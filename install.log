@@ -1,0 +1,87 @@
+##基本的には, 後々シェルスクリプトを作ることを目標にするため, コメントは#で入れることにする.
+##まずはhttps://github.com/helmuthdu/auiにあるシェルスクリプトでだいたいのものを入れる.
+
+##まずはシステム全体のアップデートをする.
+pacman -Syu
+
+#次に, kdeのkonsoleを入れる.
+pacman -S kdebase-konsole
+
+#既にaui scriptでmostは入れているので, 日本語環境のみを導入
+pacman -S texlive-langjapanese
+
+#monacoフォントがわりときにいったので, フォントど導入. たしか, ttf-monacoだったように記憶している.
+yaourt monaco
+
+#日本語用に, Rictyフォントをインストール. 結構時間がかかる.
+yaourt ricty
+
+#firefoxは既にauiで導入しているので, chrominumを入れる. auiでも入れられるけどね.
+pacman -S chromium
+
+##emacs用にddskkを導入した.
+yaourt ddskk
+
+# usb自動マウントの設定をした.
+# 参考サイトはqiita.com/rbtnn/items/f41791fd9975d00225f8
+# しかし, いまのところ認識された様子は無い.
+sudo nano /etc/udev/rules.d/11-media-by-label-auto-mount.rules
+
+>>>>>>>>>11-media-by-label-auto-mount.rules>>>>>
+KERNEL!="sd[a-z][0-9]", GOTO="media_by_label_auto_mount_end"
+
+# Import FS infos
+IMPORT{program}="/sbin/blkid -o udev -p %N"
+
+# Get a label if present, otherwise specify one
+ENV{ID_FS_LABEL}!="", ENV{dir_name}="%E{ID_FS_LABEL}"
+ENV{ID_FS_LABEL}=="", ENV{dir_name}="usbhd-%k"
+
+# Global mount options
+ACTION=="add", ENV{mount_options}="relatime"
+# Filesystem-specific mount options
+ACTION=="add", ENV{ID_FS_TYPE}=="vfat|ntfs", ENV{mount_options}="$env{mount_options},utf8,gid=100,umask=002"
+
+# Mount the device
+ACTION=="add", RUN+="/bin/mkdir -p /media/%E{dir_name}", RUN+="/bin/mount -o         $env{mount_options} /dev/%k /media/%E{dir_name}"
+
+# Clean up after removal
+ACTION=="remove", ENV{dir_name}!="", RUN+="/bin/umount -l /media/%E{dir_name}",     RUN+="/bin/rmdir /media/%E{dir_name}"
+
+# Exit
+LABEL="media_by_label_auto_mount_end"
+<<<<<<<<<
+
+# xmodmapを作成し, キーマップを設定した
+xmodmap .xmodmap
+
+>>>>>>>>>>.xmodmap
+!keycode 102 = Control_L
+!keycode 100 = Control_L
+keycode 101 = Shift_L
+keycode 108 = Escape
+
+keycode 102 = Henkan
+keycode 100 = Muhenkan
+
+
+
+keycode  66 = Control_L NoSymbol Control_L
+clear Lock
+
+add Control = Control_L
+<<<<<<<<<<
+
+# 99-xmodmapを以下のディレクトリに作成することによって, 自動起動させようと試みた.
+sudo nano /etc/X11/xinit/xinitrc.d/99-xmodmap
+
+>>>>>>>>>>99-xmodmap
+#!/bin/bash
+xmodmap $HOME/.xmodmap
+<<<<<<<<<<
+
+sudo nano /etc/X11/xinit/xinitrc.d/98-ibus
+
+
+#xmonadのdefaultの設定ファイルを探した.
+sudo locate xmonad.hs
