@@ -142,15 +142,15 @@ xmonadのdefaultの設定ファイルを探した.
 $sudo locate xmonad.hs
 
 http://oku.edu.mie-u.ac.jp/tex/mod/forum/discuss.php?d=1120を参考にしてpxdviのインストールをする
-mkdir pxdvi
-cd pxdvi
-curl -O http://www.tug.org/~preining/tlptexlive/archive/pxdvi.tar.xz
-curl -O http://www.tug.org/~preining/tlptexlive/archive/pxdvi.i386-linux.tar.xz
-tar xvf pxdvi.tar.xz
-tar xvf pxdvi.i386-linux.tar.xz
-sudo cp -p bin/i386-linux/pxdvi-xaw /usr/bin
-sudo ln -s /usr/bin/pxdvi-xaw /usr/bin/pxdvi
-sudo cp -pR texmf-dist/xdvi /usr/share/texmf-dist/pxdvi
-sudo cp -pR texmf-dist/fonts/map/pxdvi /usr/share/texmf-dist/fonts/map/pxdvi
-sudo mkdir -p /usr/share/texmf-local/web2c
-sudo cp /usr/share/texmf-dist/web2c/texmf.cnf /usr/share/texmf-local/web2c
+$mkdir pxdvi
+$cd pxdvi
+$curl -O http://www.tug.org/~preining/tlptexlive/archive/pxdvi.tar.xz
+$curl -O http://www.tug.org/~preining/tlptexlive/archive/pxdvi.i386-linux.tar.xz
+$tar xvf pxdvi.tar.xz
+$tar xvf pxdvi.i386-linux.tar.xz
+$sudo cp -p bin/i386-linux/pxdvi-xaw /usr/bin
+$sudo ln -s /usr/bin/pxdvi-xaw /usr/bin/pxdvi
+$sudo cp -pR texmf-dist/xdvi /usr/share/texmf-dist/pxdvi
+$sudo cp -pR texmf-dist/fonts/map/pxdvi /usr/share/texmf-dist/fonts/map/pxdvi
+$sudo mkdir -p /usr/share/texmf-local/web2c
+$sudo cp /usr/share/texmf-dist/web2c/texmf.cnf /usr/share/texmf-local/web2c
