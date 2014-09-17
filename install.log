@@ -1,31 +1,31 @@
-##基本的には, 後々シェルスクリプトを作ることを目標にするため, コメントは#で入れることにする.
-##まずはhttps://github.com/helmuthdu/auiにあるシェルスクリプトでだいたいのものを入れる.
+変えることにした. コメントを普通に書いて, コマンドを#以下に書くことにした.
+まずはhttps://github.com/helmuthdu/auiにあるシェルスクリプトでだいたいのものを入れる.
 
-##まずはシステム全体のアップデートをする.
-pacman -Syu
+まずはシステム全体のアップデートをする.
+#pacman -Syu
 
-#次に, kdeのkonsoleを入れる.
-pacman -S kdebase-konsole
+次に, kdeのkonsoleを入れる.
+#pacman -S kdebase-konsole
 
-#既にaui scriptでmostは入れているので, 日本語環境のみを導入
-pacman -S texlive-langjapanese
+既にaui scriptでmostは入れているので, 日本語環境のみを導入
+#pacman -S texlive-langjapanese
 
-#monacoフォントがわりときにいったので, フォントど導入. たしか, ttf-monacoだったように記憶している.
-yaourt monaco
+monacoフォントがわりときにいったので, フォントど導入. たしか, ttf-monacoだったように記憶している.
+$yaourt monaco
 
-#日本語用に, Rictyフォントをインストール. 結構時間がかかる.
-yaourt ricty
+日本語用に, Rictyフォントをインストール. 結構時間がかかる.
+$yaourt ricty
 
-#firefoxは既にauiで導入しているので, chrominumを入れる. auiでも入れられるけどね.
-pacman -S chromium
+firefoxは既にauiで導入しているので, chrominumを入れる. auiでも入れられるけどね.
+#pacman -S chromium
 
-##emacs用にddskkを導入した.
-yaourt ddskk
+emacs用にddskkを導入した.
+$yaourt ddskk
 
-# usb自動マウントの設定をした.
-# 参考サイトはqiita.com/rbtnn/items/f41791fd9975d00225f8
-# しかし, いまのところ認識された様子は無い.
-sudo nano /etc/udev/rules.d/11-media-by-label-auto-mount.rules
+ usb自動マウントの設定をした.
+ 参考サイトはqiita.com/rbtnn/items/f41791fd9975d00225f8
+ しかし, いまのところ認識された様子は無い.
+$sudo nano /etc/udev/rules.d/11-media-by-label-auto-mount.rules
 
 >>>>>>>>>11-media-by-label-auto-mount.rules>>>>>
 KERNEL!="sd[a-z][0-9]", GOTO="media_by_label_auto_mount_end"
@@ -52,8 +52,8 @@ ACTION=="remove", ENV{dir_name}!="", RUN+="/bin/umount -l /media/%E{dir_name}", 
 LABEL="media_by_label_auto_mount_end"
 <<<<<<<<<
 
-# xmodmapを作成し, キーマップを設定した
-xmodmap .xmodmap
+xmodmapを作成し, キーマップを設定した
+$xmodmap .xmodmap
 
 >>>>>>>>>>.xmodmap
 !keycode 102 = Control_L
@@ -72,16 +72,50 @@ clear Lock
 add Control = Control_L
 <<<<<<<<<<
 
-# 99-xmodmapを以下のディレクトリに作成することによって, 自動起動させようと試みた.
-sudo nano /etc/X11/xinit/xinitrc.d/99-xmodmap
+xmodmapを作成する際に, keycodeを調べるために, xevをインストールする.
+
+$yaourt xev
+$xev
+
+
+ 99-xmodmapを以下のディレクトリに作成することによって, 自動起動させようと試みた.
+$sudo nano /etc/X11/xinit/xinitrc.d/99-xmodmap
 
 >>>>>>>>>>99-xmodmap
 #!/bin/bash
 xmodmap $HOME/.xmodmap
 <<<<<<<<<<
 
-sudo nano /etc/X11/xinit/xinitrc.d/98-ibus
+98-ibusを以下のディレクトリに作成して, ibusを自動起動させることにした.
+$sudo nano /etc/X11/xinit/xinitrc.d/98-ibus
+
+>>>>>>>>>>98-ibus
+#!/bin/bash
+#ibus
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+ibus-daemon -drx
+<<<<<<<<<<
+
+先ほど作成したものに実行権限を与えます
+$sudo chmod +x /etc/X11/xinit/xinitrc.d/98-ibus
+$sudo chmod +x /etc/X11/xinit/xinitrc.d/99-xmodmap
+
+.iputrcを作成して, bashのTAB補完の大文字小文字の区別をなくした.
+置く場所は$HOME/のところ
+$emacs .inputrc
+>>>>>>>>.inputrc
+set completion-ignore-case on
+<<<<<<<<
+
+ibusとibus-morcのインストール. 一緒にibus-skk, morzc, ibus-morzcを入れた.
+$yaourt ibus
+$yaourt ibus morzc
+$yaourt ibus skk
 
 
-#xmonadのdefaultの設定ファイルを探した.
-sudo locate xmonad.hs
+
+
+xmonadのdefaultの設定ファイルを探した.
+$sudo locate xmonad.hs

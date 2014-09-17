@@ -1,0 +1,17 @@
+まだやりきれていないことを記入する予定
+
+wifiの設定をする予定だった. dhcpcdをdisableにしておかないと, wifiの方が繋らないという情報あり.
+$sudo systemctl enable NetworkManager
+$sudo systemctl disable dhcpcd.service
+$sudo systemctl enable dhcpcd.service
+$sudo systemctl enable NetworkManager
+$sudo systemctl start NetworkManager
+$sudo wifi-menu 
+$lspci -k
+$ip link
+$systemctl list-unit-files
+$systemctl disable dhcpcd.service
+$sudo systemctl disable dhcpcd.service
+$sudo systemctl disable NetworkManager
+$iw
+$iw dev
