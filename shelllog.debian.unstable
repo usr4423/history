@@ -1,0 +1,872 @@
+Welcome to the Emacs shell
+
+~ $ ls -al
+total 16
+drwxr-xr-x   3 test           test     4096 2014-09-17 23:59 .
+drwxr-xr-x   4 root           root     4096 2014-09-17 22:39 ..
+-rw-------   1 test           test      142 2014-09-17 23:03 .bash_history
+-rw-r--r--   1 test           test      220 2014-09-17 22:39 .bash_logout
+-rw-r--r--   1 test           test     3515 2014-09-17 22:39 .bashrc
+drwx------   3 test           test     4096 2014-09-17 23:59 .emacs.d
+-rw-r--r--   1 test           test      675 2014-09-17 22:39 .profile
+~ $ sudo aptitude install slim
+The following NEW packages will be installed:
+  consolekit{a} libck-connector0{a} libpam-ck-connector{a} slim xbitmaps{a} 
+  xterm{a} 
+0 packages upgraded, 6 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2062 kB of archives. After unpacking 4357 kB will be used.
+Do you want to continue? [Y/n/?] 
+Get: 1 http://ftp.jp.debian.org/debian/ jessie/main libck-connector0 i386 0.4.6-4 [59.6 kB]
+Get: 2 http://ftp.jp.debian.org/debian/ jessie/main consolekit i386 0.4.6-4 [129 kB]
+Get: 3 http://ftp.jp.debian.org/debian/ jessie/main libpam-ck-connector i386 0.4.6-4 [60.3 kB]
+Get: 4 http://ftp.jp.debian.org/debian/ jessie/main slim i386 1.3.6-3 [1171 kB]
+Get: 5 http://ftp.jp.debian.org/debian/ jessie/main xbitmaps all 1.1.1-2 [32.1 kB]
+Get: 6 http://ftp.jp.debian.org/debian/ jessie/main xterm i386 310-1 [610 kB]
+Fetched 2062 kB in 1s (1164 kB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+Preconfiguring packages ...
+Selecting previously unselected package libck-connector0:i386.
+(Reading database ... 58089 files and directories currently installed.)
+Preparing to unpack .../libck-connector0_0.4.6-4_i386.deb ...
+Unpacking libck-connector0:i386 (0.4.6-4) ...
+Selecting previously unselected package consolekit.
+Preparing to unpack .../consolekit_0.4.6-4_i386.deb ...
+Unpacking consolekit (0.4.6-4) ...
+Selecting previously unselected package libpam-ck-connector:i386.
+Preparing to unpack .../libpam-ck-connector_0.4.6-4_i386.deb ...
+Unpacking libpam-ck-connector:i386 (0.4.6-4) ...
+Selecting previously unselected package slim.
+Preparing to unpack .../archives/slim_1.3.6-3_i386.deb ...
+Unpacking slim (1.3.6-3) ...
+Selecting previously unselected package xbitmaps.
+Preparing to unpack .../xbitmaps_1.1.1-2_all.deb ...
+Unpacking xbitmaps (1.1.1-2) ...
+Selecting previously unselected package xterm.
+Preparing to unpack .../archives/xterm_310-1_i386.deb ...
+Unpacking xterm (310-1) ...
+Processing triggers for dbus (1.8.6-2) ...
+Processing triggers for man-db (2.6.7.1-1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+Processing triggers for hicolor-icon-theme (0.13-1) ...
+Processing triggers for mime-support (3.56) ...
+Setting up libck-connector0:i386 (0.4.6-4) ...
+Setting up consolekit (0.4.6-4) ...
+Setting up libpam-ck-connector:i386 (0.4.6-4) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+Setting up xbitmaps (1.1.1-2) ...
+Setting up xterm (310-1) ...
+Processing triggers for dbus (1.8.6-2) ...
+Setting up slim (1.3.6-3) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+Processing triggers for libc-bin (2.19-11) ...
+                            
+~ $ git --version
+git: command not found
+~ $ sudo aptitude install git
+The following NEW packages will be installed:
+  git git-man{a} liberror-perl{a} rsync{a} 
+0 packages upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+Need to get 4933 kB of archives. After unpacking 25.6 MB will be used.
+Do you want to continue? [Y/n/?] 
+Get: 1 http://ftp.jp.debian.org/debian/ jessie/main liberror-perl all 0.17-1.1 [22.4 kB]
+Get: 2 http://ftp.jp.debian.org/debian/ jessie/main git-man all 1:2.1.0-1 [1263 kB]
+Get: 3 http://ftp.jp.debian.org/debian/ jessie/main git i386 1:2.1.0-1 [3251 kB]
+Get: 4 http://ftp.jp.debian.org/debian/ jessie/main rsync i386 3.1.1-2 [396 kB]
+Fetched 4933 kB in 2s (2205 kB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+Selecting previously unselected package liberror-perl.
+(Reading database ... 58323 files and directories currently installed.)
+Preparing to unpack .../liberror-perl_0.17-1.1_all.deb ...
+Unpacking liberror-perl (0.17-1.1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../git-man_1%3a2.1.0-1_all.deb ...
+Unpacking git-man (1:2.1.0-1) ...
+Selecting previously unselected package git.
+Preparing to unpack .../git_1%3a2.1.0-1_i386.deb ...
+Unpacking git (1:2.1.0-1) ...
+Selecting previously unselected package rsync.
+Preparing to unpack .../rsync_3.1.1-2_i386.deb ...
+Unpacking rsync (3.1.1-2) ...
+Processing triggers for man-db (2.6.7.1-1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+                            
+~ $ git clone https://github.com/usr4423/debian-and-xmonad-Config.git
+Cloning into 'debian-and-xmonad-Config'...
+remote: Counting objects: 1535, done.        
+remote: Total 1535 (delta 0), reused 0 (delta 0)        
+Receiving objects: 100% (1535/1535), 20.27 MiB | 247.00 KiB/s, done.
+Resolving deltas: 100% (819/819), done.
+Checking connectivity... done.
+~ $ git clone https://github.com/usr4423/monaco-font.git
+Cloning into 'monaco-font'...
+remote: Counting objects: 70, done.        
+remote: Total 70 (delta 0), reused 0 (delta 0)        
+Unpacking objects: 100% (70/70), done.
+Checking connectivity... done.
+~ $ cd monaco-font/
+~/monaco-font $ cd ..
+~ $ curl -kL https://raw.github.com/cstrap/monaco-font/master/install-font-ubuntu.sh | bash
+curl: command not found
+~ $ sudo aptitude search curl
+p   curl                            - command line tool for transferring data wi
+p   curlftpfs                       - filesystem to access FTP hosts based on FU
+p   falconpl-curl                   - Curl bindings for Falcon P.L              
+p   flickcurl-doc                   - utilities to call the Flickr API from comm
+p   flickcurl-utils                 - utilities to call the Flickr API from comm
+p   gambas3-gb-net-curl             - Gambas advanced networking component      
+p   gnupg-curl                      - GNU privacy guard - a free PGP replacement
+p   libcupt3-0-downloadmethod-curl  - flexible package manager -- libcurl downlo
+v   libcurl-dev                     -                                           
+p   libcurl-ocaml                   - OCaml curl bindings (Runtime Library)     
+p   libcurl-ocaml-dev               - OCaml libcurl bindings (Development packag
+v   libcurl-ocaml-dev-ephj1         -                                           
+v   libcurl-ocaml-ephj1             -                                           
+v   libcurl-ssl-dev                 -                                           
+p   libcurl3                        - easy-to-use client-side URL transfer libra
+p   libcurl3-dbg                    - debugging symbols for libcurl (OpenSSL, Gn
+v   libcurl3-dev                    -                                           
+i A libcurl3-gnutls                 - easy-to-use client-side URL transfer libra
+v   libcurl3-gnutls-dev             -                                           
+p   libcurl3-nss                    - easy-to-use client-side URL transfer libra
+v   libcurl3-nss-dev                -                                           
+v   libcurl3-openssl-dev            -                                           
+v   libcurl4-dbg                    -                                           
+v   libcurl4-dev                    -                                           
+p   libcurl4-doc                    - documentation for libcurl                 
+p   libcurl4-gnutls-dev             - development files and documentation for li
+p   libcurl4-nss-dev                - development files and documentation for li
+p   libcurl4-openssl-dev            - development files and documentation for li
+p   libcurlpp-dev                   - c++ wrapper for libcurl (development files
+p   libcurlpp0                      - c++ wrapper for libcurl                   
+p   libflickcurl-dev                - C library for accessing the Flickr API - d
+p   libflickcurl0                   - C library for accessing the Flickr API    
+p   libflickcurl0-dbg               - C library for accessing the Flickr API - d
+p   libghc-curl-dev                 - GHC libraries for the libcurl Haskell bind
+v   libghc-curl-dev-1.3.8-c13df     -                                           
+p   libghc-curl-doc                 - Documentation for the libcurl Haskell bind
+p   libghc-curl-prof                - Profiling libraries for the libcurl Haskel
+v   libghc-curl-prof-1.3.8-c13df    -                                           
+p   libghc-download-curl-dev        - High-level file download based on URLs    
+v   libghc-download-curl-dev-0.1.4- -                                           
+p   libghc-download-curl-doc        - High-level file download based on URLs; do
+p   libghc-download-curl-prof       - High-level file download based on URLs; pr
+v   libghc-download-curl-prof-0.1.4 -                                           
+p   libghc-hxt-curl-dev             - LibCurl interface for HXT                 
+v   libghc-hxt-curl-dev-9.1.1-08502 -                                           
+p   libghc-hxt-curl-doc             - LibCurl interface for HXT; documentation  
+p   libghc-hxt-curl-prof            - LibCurl interface for HXT; profiling libra
+v   libghc-hxt-curl-prof-9.1.1-0850 -                                           
+p   libwww-curl-perl                - Perl bindings to libcurl                  
+p   lua-curl                        - libcURL bindings for the Lua language     
+p   lua-curl-dev                    - libcURL development files for the Lua lang
+v   lua5.1-curl                     -                                           
+v   lua5.1-curl-dev                 -                                           
+v   lua5.2-curl                     -                                           
+v   lua5.2-curl-dev                 -                                           
+p   php5-curl                       - CURL module for php5                      
+p   python-pycurl                   - Python bindings to libcurl (Python 3)     
+p   python-pycurl-dbg               - Python bindings to libcurl (debug extensio
+p   python3-pycurl                  - Python bindings to libcurl                
+p   python3-pycurl-dbg              - Python bindings to libcurl (debug extensio
+p   r-cran-rcurl                    - GNU R General network (HTTP/FTP/...) clien
+p   s3curl                          - Easily interact with AWS S3 HTTP services 
+p   slang-curl                      - transfer files using HTTP and FTP from S-L
+p   spl-curl                        - SPL Programming Language -- curl adapter  
+p   tclcurl                         - Tcl bindings to libcurl                   
+p   uwsgi-plugin-alarm-curl         - cURL alarm plugin for uWSGI               
+p   uwsgi-plugin-curl-cron          - cron cURL plugin for uWSGI                
+p   xmms2-plugin-curl               - XMMS2 - curl transport for HTTP           
+~ $ sudo aptitude install curl
+The following NEW packages will be installed:
+  curl libcurl3{a} 
+0 packages upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 477 kB of archives. After unpacking 897 kB will be used.
+Do you want to continue? [Y/n/?] 
+Get: 1 http://ftp.jp.debian.org/debian/ jessie/main libcurl3 i386 7.38.0-1 [277 kB]
+Get: 2 http://ftp.jp.debian.org/debian/ jessie/main curl i386 7.38.0-1 [200 kB]
+Fetched 477 kB in 0s (1226 kB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+Selecting previously unselected package libcurl3:i386.
+(Reading database ... 59117 files and directories currently installed.)
+Preparing to unpack .../libcurl3_7.38.0-1_i386.deb ...
+Unpacking libcurl3:i386 (7.38.0-1) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../curl_7.38.0-1_i386.deb ...
+Unpacking curl (7.38.0-1) ...
+Processing triggers for man-db (2.6.7.1-1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+                            
+~ $ curl -kL https://raw.github.com/cstrap/monaco-font/master/install-font-ubuntu.sh | bash
+test@debian:~$ test@debian:~$ test@debian:~$ Start install
+test@debian:~$ [sudo] password for test: 
+Sorry, try again.
+[sudo] password for tes
+test@debian:~$ 
+test@debian:~$ 
+test@debian:~$ 
+test@debian:~$ 
+test@debian:~$ ks
+bash: ks: command not found
+test@debian:
+test@debian:~$ curl -kL https://raw.github.com/cstrap/monaco-font/master/install-font-ubuntu.sh | bash
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   325  100   325    0     0    391      0 --:--:-- --:--:-- --:--:--   391
+Start install
+Downloading font
+--2014-09-18 00:10:52--  https://github.com/cstrap/monaco-font/raw/master/Monaco_Linux.ttf
+Resolving github.com (github.com)... 192.30.252.130
+Connecting to github.com (github.com)|192.30.252.130|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://raw.githubusercontent.com/cstrap/monaco-font/master/Monaco_Linux.ttf [following]
+--2014-09-18 00:10:52--  https://raw.githubusercontent.com/cstrap/monaco-font/master/Monaco_Linux.ttf
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 103.245.222.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|103.245.222.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 252988 (247K) [application/octet-stream]
+Saving to: ‘Monaco_Linux.ttf’
+
+100%[======================================>] 252,988     --.-K/s   in 0.1s    
+
+2014-09-18 00:10:53 (2.47 MB/s) - ‘Monaco_Linux.ttf’ saved [252988/252988]
+
+Installing font
+Updating font cache
+/usr/share/fonts: caching, new cache contents: 0 fonts, 3 dirs
+/usr/share/fonts/cmap: caching, new cache contents: 0 fonts, 5 dirs
+/usr/share/fonts/cmap/adobe-cns1: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-gb1: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-japan1: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-japan2: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-korea1: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/truetype: caching, new cache contents: 0 fonts, 4 dirs
+/usr/share/fonts/truetype/custom: caching, new cache contents: 1 fonts, 0 dirs
+/usr/share/fonts/truetype/dejavu: caching, new cache contents: 21 fonts, 0 dirs
+/usr/share/fonts/truetype/droid: caching, new cache contents: 23 fonts, 0 dirs
+/usr/share/fonts/truetype/freefont: caching, new cache contents: 12 fonts, 0 dirs
+/usr/share/fonts/type1: caching, new cache contents: 0 fonts, 1 dirs
+/usr/share/fonts/type1/gsfonts: caching, new cache contents: 35 fonts, 0 dirs
+/usr/X11R6/lib/X11/fonts: skipping, no such directory
+/usr/local/share/fonts: caching, new cache contents: 0 fonts, 0 dirs
+/root/.local/share/fonts: skipping, no such directory
+/root/.fonts: skipping, no such directory
+/usr/share/fonts: caching, new cache contents: 0 fonts, 3 dirs
+/usr/X11R6/lib/X11/fonts: skipping, no such directory
+/usr/local/share/fonts: caching, new cache contents: 0 fonts, 0 dirs
+/root/.local/share/fonts: skipping, no such directory
+/root/.fonts: skipping, no such directory
+/var/cache/fontconfig: cleaning cache directory
+/root/.cache/fontconfig: not cleaning non-existent cache directory
+/root/.fontconfig: not cleaning non-existent cache directory
+fc-c
+test@debian:~$ ls -a
+.   .bash_history  .bashrc                   .emacs.d     .profile
+..  .bash_logout   debian-and-xmonad-Config  monaco-font
+test@debian:~$ cd debian-and-xmonad-Config
+test@debian:~/debian-and-xmonad-Config$ ls
+apps  dotfiles  README.md  screenshots  setup.sh  weechat_setup.txt
+test@debian:~/debian-and-xmonad-Config$ls -al
+total 40
+drwxr-xr-x  5 test test 4096 Sep 18 00:05 .
+drwxr-xr-x  5 test test 4096 Sep 18 00:10 ..
+-rwxr-xr-x  1 test test  914 Sep 18 00:05 apps
+drwxr-xr-x 15 test test 4096 Sep 18 00:05 dotfiles
+drwxr-xr-x  8 test test 4096 Sep 18 00:05 .git
+-rwxr-xr-x  1 test test 4637 Sep 18 00:05 README.md
+drwxr-xr-x  2 test test 4096 Sep 18 00:05 screenshots
+-rwxr-xr-x  1 test test 1678 Sep 18 00:05 setup.sh
+-rw-r--r--  1 test test  561 Sep 18 00:05 weechat_setup.txt
+test@debian:~/debian-and-xmonad-Config$ ./setup.sh
+Installing Software ..
+deb http://cdn.debian.net/debian unstable main
+Get:1 http://cdn.debian.net unstable InRelease [233 kB]
+Get:2 http://cdn.debian.net unstable/main Translation-en [4,722 kB]
+Hit http://security.debian.org jessie/updates InRelease
+Hit http://ftp.jp.debian.org jessie InRelease
+Hit http://ftp.jp.debian.org jessie-updates InRelease
+Hit http://ftp.jp.debian.org jessie-backports InRelease
+Hit http://security.debian.org jessie/updates/main Sources
+Get:3 http://ftp.jp.debian.org jessie/main Sources/DiffIndex [7,876 B]
+Get:4 http://ftp.jp.debian.org jessie/main i386 Packages/DiffIndex [7,876 B]
+Get:5 http://ftp.jp.debian.org jessie/main Translation-en/DiffIndex [7,876 B]
+Hit http://security.debian.org jessie/updates/main i386 Packages
+Hit http://security.debian.org jessie/updates/main Translation-en
+Hit http://ftp.jp.debian.org jessie-updates/main Sources
+Hit http://ftp.jp.debian.org jessie-updates/main i386 Packages
+Hit http://ftp.jp.debian.org jessie-updates/main Translation-en
+Hit http://ftp.jp.debian.org jessie-backports/main Sources
+Hit http://ftp.jp.debian.org jessie-backports/main i386 Packages
+Hit http://ftp.jp.debian.org jessie-backports/main Translation-en
+Get:6 http://cdn.debian.net unstable/main i386 Packages [6,968 kB]
+Fetched 11.9 MB in 18s (636 kB/s)
+Reading package lists... Done
+./setup.sh: line 8: apps: No such file or directory
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 92 not upgraded.
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following extra packages will be installed:
+  libnspr4 libnss3 libstartup-notification0 libxcb-util0
+Suggested packages:
+  fonts-stix otf-stix fonts-oflb-asana-math fonts-mathjax mozplugger
+  libgnomeui-0
+The following NEW packages will be installed:
+  iceweasel libnspr4 libnss3 libstartup-notification0 libxcb-util0
+0 upgraded, 5 newly installed, 0 to remove and 92 not upgraded.
+Need to get 34.1 MB of archives.
+After this operation, 85.1 MB of additional disk space will be used.
+Do you want to continue? [Y/n] 
+Get:1 http://ftp.jp.debian.org/debian/ jessie/main libnspr4 i386 2:4.10.7-1 [126 kB]
+Get:2 http://ftp.jp.debian.org/debian/ jessie/main libnss3 i386 2:3.17-1 [1,184 kB]
+Get:3 http://ftp.jp.debian.org/debian/ jessie/main libxcb-util0 i386 0.3.8-3 [23.0 kB]
+Get:4 http://ftp.jp.debian.org/debian/ jessie/main libstartup-notification0 i386 0.12-4 [24.2 kB]
+Get:5 http://ftp.jp.debian.org/debian/ jessie/main iceweasel i386 31.1.0esr-1 [32.7 MB]
+Fetched 34.1 MB in 18s (1,798 kB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+Selecting previously unselected package libnspr4:i386.
+(Reading database ... 59133 files and directories currently installed.)
+Preparing to unpack .../libnspr4_2%3a4.10.7-1_i386.deb ...
+Unpacking libnspr4:i386 (2:4.10.7-1) ...
+Selecting previously unselected package libnss3:i386.
+Preparing to unpack .../libnss3_2%3a3.17-1_i386.deb ...
+Unpacking libnss3:i386 (2:3.17-1) ...
+Selecting previously unselected package libxcb-util0:i386.
+Preparing to unpack .../libxcb-util0_0.3.8-3_i386.deb ...
+Unpacking libxcb-util0:i386 (0.3.8-3) ...
+Selecting previously unselected package libstartup-notification0:i386.
+Preparing to unpack .../libstartup-notification0_0.12-4_i386.deb ...
+Unpacking libstartup-notification0:i386 (0.12-4) ...
+Selecting previously unselected package iceweasel.
+Preparing to unpack .../iceweasel_31.1.0esr-1_i386.deb ...
+Adding 'diversion of /usr/bin/firefox to /usr/bin/firefox.real by iceweasel'
+Unpacking iceweasel (31.1.0esr-1) ...
+Processing triggers for man-db (2.6.7.1-1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+Processing triggers for mime-support (3.56) ...
+Processing triggers for hicolor-icon-theme (0.13-1) ...
+Setting urxvt as default terminal emulator ..
+update-alternatives: error: alternative /usr/bin/urxvt for x-terminal-emulator not registered; not setting
+Getting patched font for Powerline ..
+--2014-09-18 00:13:34--  https://github.com/Lokaltog/powerline-fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf
+Resolving github.com (github.com)... 192.30.252.131
+Connecting to github.com (github.com)|192.30.252.131|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://raw.githubusercontent.com/Lokaltog/powerline-fonts/master/Inconsolata/Inconsolata%20for%20Powerline.otf [following]
+--2014-09-18 00:13:34--  https://raw.githubusercontent.com/Lokaltog/powerline-fonts/master/Inconsolata/Inconsolata%20for%20Powerline.otf
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 103.245.222.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|103.245.222.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 28828 (28K) [application/octet-stream]
+Saving to: ‘Inconsolata for Powerline.otf’
+
+100%[======================================>] 28,828      --.-K/s   in 0.01s   
+
+2014-09-18 00:13:34 (2.83 MB/s) - ‘Inconsolata for Powerline.otf’ saved [28828/28828]
+
+/usr/share/fonts: caching, new cache contents: 1 fonts, 3 dirs
+/usr/share/fonts/cmap: caching, new cache contents: 0 fonts, 5 dirs
+/usr/share/fonts/cmap/adobe-cns1: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-gb1: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-japan1: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-japan2: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-korea1: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/truetype: caching, new cache contents: 0 fonts, 4 dirs
+/usr/share/fonts/truetype/custom: caching, new cache contents: 1 fonts, 0 dirs
+/usr/share/fonts/truetype/dejavu: caching, new cache contents: 21 fonts, 0 dirs
+/usr/share/fonts/truetype/droid: caching, new cache contents: 23 fonts, 0 dirs
+/usr/share/fonts/truetype/freefont: caching, new cache contents: 12 fonts, 0 dirs
+/usr/share/fonts/type1: caching, new cache contents: 0 fonts, 1 dirs
+/usr/share/fonts/type1/gsfonts: caching, new cache contents: 35 fonts, 0 dirs
+/usr/X11R6/lib/X11/fonts: skipping, no such directory
+/usr/local/share/fonts: caching, new cache contents: 0 fonts, 0 dirs
+/root/.local/share/fonts: skipping, no such directory
+/root/.fonts: skipping, no such directory
+/usr/share/fonts: caching, new cache contents: 1 fonts, 3 dirs
+/usr/X11R6/lib/X11/fonts: skipping, no such directory
+/usr/local/share/fonts: caching, new cache contents: 0 fonts, 0 dirs
+/root/.local/share/fonts: skipping, no such directory
+/root/.fonts: skipping, no such directory
+/var/cache/fontconfig: cleaning cache directory
+/root/.cache/fontconfig: not cleaning non-existent cache directory
+/root/.fontconfig: not cleaning non-existent cache directory
+fc-cache: succeeded
+Configuring ZSH and Prezto ..
+Cloning into '/home/test/.zprezto'...
+remote: Counting objects: 7734, done.        
+remote: Total 7734 (delta 0), reused 0 (delta 0)        
+Receiving objects: 100% (7734/7734), 1.58 MiB | 182.00 KiB/s, done.
+Resolving deltas: 100% (3251/3251), done.
+Checking connectivity... done.
+Submodule 'modules/completion/external' (https://github.com/zsh-users/zsh-completions.git) registered for path 'modules/completion/external'
+Submodule 'modules/history-substring-search/external' (https://github.com/zsh-users/zsh-history-substring-search.git) registered for path 'modules/history-substring-search/external'
+Submodule 'modules/syntax-highlighting/external' (https://github.com/zsh-users/zsh-syntax-highlighting.git) registered for path 'modules/syntax-highlighting/external'
+Cloning into 'modules/completion/external'...
+remote: Counting objects: 2107, done.        
+remote: Compressing objects: 100% (16/16), done.        
+remote: Total 2107 (delta 7), reused 1 (delta 0)        
+Receiving objects: 100% (2107/2107), 849.16 KiB | 158.00 KiB/s, done.
+Resolving deltas: 100% (1205/1205), done.
+Checking connectivity... done.
+Submodule path 'modules/completion/external': checked out '1d6a2aa024ea159229b3cfa6942cadaab1961ace'
+Cloning into 'modules/history-substring-search/external'...
+remote: Counting objects: 239, done.        
+remote: Total 239 (delta 0), reused 0 (delta 0)        
+Receiving objects: 100% (239/239), 61.85 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (118/118), done.
+Checking connectivity... done.
+Submodule path 'modules/history-substring-search/external': checked out '1e7680405239a835aa403a7457cad23750f98e72'
+Cloning into 'modules/syntax-highlighting/external'...
+remote: Counting objects: 795, done.        
+remote: Total 795 (delta 0), reused 0 (delta 0)        
+Receiving objects: 100% (795/795), 132.58 KiB | 156.00 KiB/s, done.
+Resolving deltas: 100% (420/420), done.
+Checking connectivity... done.
+Submodule path 'modules/syntax-highlighting/external': checked out 'f289a9f8e7a8a1752cd88f2366e6dacf8a0036e7'
+./setup.sh: line 22: zsh: command not found
+Password: 
+chsh: /bin/zsh is an invalid shell
+Installing screenfetch ..
+--2014-09-18 00:14:09--  https://raw.github.com/KittyKatt/screenFetch/master/screenfetch-dev
+Resolving raw.github.com (raw.github.com)... 103.245.222.133
+Connecting to raw.github.com (raw.github.com)|103.245.222.133|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://raw.githubusercontent.com/KittyKatt/screenFetch/master/screenfetch-dev [following]
+--2014-09-18 00:14:10--  https://raw.githubusercontent.com/KittyKatt/screenFetch/master/screenfetch-dev
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 103.245.222.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|103.245.222.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 144176 (141K) [text/plain]
+Saving to: ‘screenfetch’
+
+100%[======================================>] 144,176     --.-K/s   in 0.06s   
+
+2014-09-18 00:14:11 (2.24 MB/s) - ‘screenfetch’ saved [144176/144176]
+
+Pimping Vim ..
+Cloning into '/home/test/.vim/bundle/vundle'...
+remote: Counting objects: 2805, done.        
+remote: Total 2805 (delta 0), reused 0 (delta 0)        
+Receiving objects: 100% (2805/2805), 834.42 KiB | 141.00 KiB/s, done.
+Resolving deltas: 100% (946/946), done.
+Checking connectivity... done.
+Installing basics for Haskell Dev ..
+./setup.sh: line 37: cabal: command not found
+Applying personal configs ..
+Cloning into '/home/test/setup_tmp'...
+remote: Counting objects: 1535, done.        
+Receiving objects: 100% (1535/1535), 20.27 MiB | 61.00 KiB/s, done.
+remote: Total 1535 (delta 0), reused 0 (delta 0)        
+Resolving deltas: 100% (819/819), done.
+Checking connectivity... done.
+sending incremental file list
+./
+.Xdefaults
+.abcde.conf
+.fehbg
+.rsnapshot.conf
+.tmux.conf
+.urlview
+.vimperatorrc
+.vimrc
+.wallpaper
+.xinitrc
+.config/
+.config/htop/
+.config/htop/htoprc
+.conky/
+.conky/conkyrc
+.ghc/
+.ghc/ghci.conf
+.mutt/
+.mutt/certificates
+.mutt/mailcap
+.mutt/muttrc
+.ncmpcpp/
+.ncmpcpp/config
+.newsbeuter/
+.newsbeuter/config
+.newsbeuter/urls
+.unison/
+.unison/raspi.prf
+.vim/
+.vim/vundlerc
+.vimperator/
+.vimperator/colors/
+.vimperator/colors/zenburn.vimp
+.vimperator/plugin/
+.vimperator/plugin/noscript.js
+.weechat/
+.weechat/weechat.conf
+.xmonad/
+.xmonad/xmonad.hs
+.xmonad/bin/
+.xmonad/bin/autostart.sh
+.xmonad/bin/conkybar.sh
+.xmonad/bin/getVolume.sh
+.xmonad/bin/musicbar.sh
+.xmonad/xbm/
+.xmonad/xbm/README
+.xmonad/xbm/ac.xbm
+.xmonad/xbm/ac_01.xbm
+.xmonad/xbm/arch.xbm
+.xmonad/xbm/arch_10x10.xbm
+.xmonad/xbm/art.xbm
+.xmonad/xbm/bat_empty_01.xbm
+.xmonad/xbm/bat_empty_02.xbm
+.xmonad/xbm/bat_full_01.xbm
+.xmonad/xbm/bat_full_02.xbm
+.xmonad/xbm/bat_low_01.xbm
+.xmonad/xbm/bat_low_02.xbm
+.xmonad/xbm/battery.xbm
+.xmonad/xbm/battery10.xbm
+.xmonad/xbm/battery20.xbm
+.xmonad/xbm/battery30.xbm
+.xmonad/xbm/battery40.xbm
+.xmonad/xbm/battery50.xbm
+.xmonad/xbm/battery60.xbm
+.xmonad/xbm/battery70.xbm
+.xmonad/xbm/battery80.xbm
+.xmonad/xbm/battery90.xbm
+.xmonad/xbm/bluetooth.xbm
+.xmonad/xbm/bug_01.xbm
+.xmonad/xbm/bug_02.xbm
+.xmonad/xbm/calendar.xbm
+.xmonad/xbm/cat.xbm
+.xmonad/xbm/clock.xbm
+.xmonad/xbm/code.xbm
+.xmonad/xbm/corner.xbm
+.xmonad/xbm/corner_left.xbm
+.xmonad/xbm/corner_right.xbm
+.xmonad/xbm/cpu.xbm
+.xmonad/xbm/dish.xbm
+.xmonad/xbm/diskette.xbm
+.xmonad/xbm/docs.xbm
+.xmonad/xbm/empty.xbm
+.xmonad/xbm/eye_l.xbm
+.xmonad/xbm/eye_r.xbm
+.xmonad/xbm/fox.xbm
+.xmonad/xbm/fs_01.xbm
+.xmonad/xbm/fs_02.xbm
+.xmonad/xbm/full (1).xbm
+.xmonad/xbm/full.xbm
+.xmonad/xbm/fwd.xbm
+.xmonad/xbm/games.xbm
+.xmonad/xbm/grid.xbm
+.xmonad/xbm/half.xbm
+.xmonad/xbm/icons.tar.gz
+.xmonad/xbm/info_01.xbm
+.xmonad/xbm/info_02.xbm
+.xmonad/xbm/info_03.xbm
+.xmonad/xbm/lan.xbm
+.xmonad/xbm/layout_focus.xbm
+.xmonad/xbm/layout_full.xbm
+.xmonad/xbm/layout_grid.xbm
+.xmonad/xbm/layout_mirror_tall.xbm
+.xmonad/xbm/layout_mtall.xbm
+.xmonad/xbm/layout_tabbed.xbm
+.xmonad/xbm/layout_tall.xbm
+.xmonad/xbm/mail.xbm
+.xmonad/xbm/media.xbm
+.xmonad/xbm/mem.xbm
+.xmonad/xbm/mouse_01.xbm
+.xmonad/xbm/music.xbm
+.xmonad/xbm/net_down_01.xbm
+.xmonad/xbm/net_down_02.xbm
+.xmonad/xbm/net_down_03.xbm
+.xmonad/xbm/net_up_01.xbm
+.xmonad/xbm/net_up_02.xbm
+.xmonad/xbm/net_up_03.xbm
+.xmonad/xbm/net_wired.xbm
+.xmonad/xbm/next.xbm
+.xmonad/xbm/note.xbm
+.xmonad/xbm/pacman.xbm
+.xmonad/xbm/pause.xbm
+.xmonad/xbm/phones.xbm
+.xmonad/xbm/pics.xbm
+.xmonad/xbm/play.xbm
+.xmonad/xbm/playpause.xbm
+.xmonad/xbm/plug.xbm
+.xmonad/xbm/prev.xbm
+.xmonad/xbm/rwd.xbm
+.xmonad/xbm/scorpio.xbm
+.xmonad/xbm/shroom.xbm
+.xmonad/xbm/spkr_01.xbm
+.xmonad/xbm/spkr_02.xbm
+.xmonad/xbm/spkr_03.xbm
+.xmonad/xbm/stop.xbm
+.xmonad/xbm/tall.xbm
+.xmonad/xbm/temp.xbm
+.xmonad/xbm/term.xbm
+.xmonad/xbm/test.xbm
+.xmonad/xbm/time.xbm
+.xmonad/xbm/usb.xbm
+.xmonad/xbm/usb_02.xbm
+.xmonad/xbm/volume0.xbm
+.xmonad/xbm/volume100.xbm
+.xmonad/xbm/volume25.xbm
+.xmonad/xbm/volume50.xbm
+.xmonad/xbm/volume75.xbm
+.xmonad/xbm/wifi.xbm
+.xmonad/xbm/wifi_01.xbm
+.xmonad/xbm/wifi_02.xbm
+.xmonad/xbm/wireless1.xbm
+.xmonad/xbm/wireless2.xbm
+.xmonad/xbm/wireless3.xbm
+.xmonad/xbm/wireless4.xbm
+.xmonad/xbm/wireless5.xbm
+.xmonad/xbm/www.xbm
+.xmonad/xbm/xbm8x8/
+.xmonad/xbm/xbm8x8/README
+.xmonad/xbm/xbm8x8/ac.xbm
+.xmonad/xbm/xbm8x8/ac_01.xbm
+.xmonad/xbm/xbm8x8/arch.xbm
+.xmonad/xbm/xbm8x8/arch_10x10.xbm
+.xmonad/xbm/xbm8x8/bat_empty_01.xbm
+.xmonad/xbm/xbm8x8/bat_empty_02.xbm
+.xmonad/xbm/xbm8x8/bat_full_01.xbm
+.xmonad/xbm/xbm8x8/bat_full_02.xbm
+.xmonad/xbm/xbm8x8/bat_low_01.xbm
+.xmonad/xbm/xbm8x8/bat_low_02.xbm
+.xmonad/xbm/xbm8x8/bluetooth.xbm
+.xmonad/xbm/xbm8x8/bug_01.xbm
+.xmonad/xbm/xbm8x8/bug_02.xbm
+.xmonad/xbm/xbm8x8/cat.xbm
+.xmonad/xbm/xbm8x8/clock.xbm
+.xmonad/xbm/xbm8x8/cpu.xbm
+.xmonad/xbm/xbm8x8/dish.xbm
+.xmonad/xbm/xbm8x8/diskette.xbm
+.xmonad/xbm/xbm8x8/empty.xbm
+.xmonad/xbm/xbm8x8/eye_l.xbm
+.xmonad/xbm/xbm8x8/eye_r.xbm
+.xmonad/xbm/xbm8x8/fox.xbm
+.xmonad/xbm/xbm8x8/fs_01.xbm
+.xmonad/xbm/xbm8x8/fs_02.xbm
+.xmonad/xbm/xbm8x8/full.xbm
+.xmonad/xbm/xbm8x8/fwd.xbm
+.xmonad/xbm/xbm8x8/half.xbm
+.xmonad/xbm/xbm8x8/info_01.xbm
+.xmonad/xbm/xbm8x8/info_02.xbm
+.xmonad/xbm/xbm8x8/info_03.xbm
+.xmonad/xbm/xbm8x8/mail.xbm
+.xmonad/xbm/xbm8x8/mem.xbm
+.xmonad/xbm/xbm8x8/mouse_01.xbm
+.xmonad/xbm/xbm8x8/net_down_01.xbm
+.xmonad/xbm/xbm8x8/net_down_02.xbm
+.xmonad/xbm/xbm8x8/net_down_03.xbm
+.xmonad/xbm/xbm8x8/net_up_01.xbm
+.xmonad/xbm/xbm8x8/net_up_02.xbm
+.xmonad/xbm/xbm8x8/net_up_03.xbm
+.xmonad/xbm/xbm8x8/net_wired.xbm
+.xmonad/xbm/xbm8x8/next.xbm
+.xmonad/xbm/xbm8x8/note.xbm
+.xmonad/xbm/xbm8x8/pacman.xbm
+.xmonad/xbm/xbm8x8/pause.xbm
+.xmonad/xbm/xbm8x8/phones.xbm
+.xmonad/xbm/xbm8x8/play.xbm
+.xmonad/xbm/xbm8x8/plug.xbm
+.xmonad/xbm/xbm8x8/prev.xbm
+.xmonad/xbm/xbm8x8/rwd.xbm
+.xmonad/xbm/xbm8x8/scorpio.xbm
+.xmonad/xbm/xbm8x8/shroom.xbm
+.xmonad/xbm/xbm8x8/spkr_01.xbm
+.xmonad/xbm/xbm8x8/spkr_02.xbm
+.xmonad/xbm/xbm8x8/spkr_03.xbm
+.xmonad/xbm/xbm8x8/stop.xbm
+.xmonad/xbm/xbm8x8/temp.xbm
+.xmonad/xbm/xbm8x8/test.xbm
+.xmonad/xbm/xbm8x8/usb.xbm
+.xmonad/xbm/xbm8x8/usb_02.xbm
+.xmonad/xbm/xbm8x8/wifi_01.xbm
+.xmonad/xbm/xbm8x8/wifi_02.xbm
+.zprezto/
+.zprezto/runcoms/
+.zprezto/runcoms/.zprofile
+.zprezto/runcoms/zpreztorc
+.zprezto/runcoms/zshrc
+bin/
+bin/mount_container.sh
+bin/umount_container.sh
+
+sent 8.49M bytes  received 4.03K bytes  16.98M bytes/sec
+total size is 8.47M  speedup is 1.00
+.fehbg: 1: .fehbg: feh: not found
+rm: remove write-protected regular file ‘/home/test/setup_tmp/.git/objects/pack/pack-5a8a5e77eb67646139a11b0f4a2731c2c8b9b55f.pack’? 
+rm: remove write-protected regular file ‘/home/test/setup_tmp/.git/objects/pack/pack-5a8a5e77eb67646139a11b0f4a2731c2c8b9b55f.idx’? 
+rm: cannot remove ‘/home/test/setup_tmp/.git/objects/pack’: Directory not empty
+Installing Vim Plugins ..
+./setup.sh: line 48: vim: command not found
+Setup finished! Please reboot!
+test@debian:~/debian-and-xmonad-Config$ sudo aptitude install fontforge ttf-inconsolata fonts-migmix
+No candidate version found for ttf-inconsolata
+No candidate version found for ttf-inconsolata
+The following NEW packages will be installed:
+  fontforge fontforge-common{a} fonts-migmix libfontforge1{a} libgdraw4{a} 
+  libpangoxft-1.0-0{a} libspiro0{a} libuninameslist0{a} 
+0 packages upgraded, 8 newly installed, 0 to remove and 92 not upgraded.
+Need to get 9,478 kB of archives. After unpacking 70.4 MB will be used.
+Do you want to continue? [Y/n/?] 
+Get: 1 http://ftp.jp.debian.org/debian/ jessie/main libpangoxft-1.0-0 i386 1.36.7-1 [195 kB]
+Get: 2 http://ftp.jp.debian.org/debian/ jessie/main libspiro0 i386 20071029-10 [12.9 kB]
+Get: 3 http://ftp.jp.debian.org/debian/ jessie/main libuninameslist0 i386 0.3.20130501-3 [209 kB]
+Get: 4 http://ftp.jp.debian.org/debian/ jessie/main fontforge-common all 20120731.b-5 [948 kB]
+Get: 5 http://ftp.jp.debian.org/debian/ jessie/main libfontforge1 i386 20120731.b-5 [1,746 kB]
+Get: 6 http://ftp.jp.debian.org/debian/ jessie/main libgdraw4 i386 20120731.b-5 [309 kB]
+Get: 7 http://ftp.jp.debian.org/debian/ jessie/main fontforge i386 20120731.b-5 [870 kB]
+Get: 8 http://ftp.jp.debian.org/debian/ jessie/main fonts-migmix all 20130617-1 [5,188 kB]
+Fetched 9,478 kB in 7s (1,232 kB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+Selecting previously unselected package libpangoxft-1.0-0:i386.
+(Reading database ... 59287 files and directories currently installed.)
+Preparing to unpack .../libpangoxft-1.0-0_1.36.7-1_i386.deb ...
+Unpacking libpangoxft-1.0-0:i386 (1.36.7-1) ...
+Selecting previously unselected package libspiro0:i386.
+Preparing to unpack .../libspiro0_20071029-10_i386.deb ...
+Unpacking libspiro0:i386 (20071029-10) ...
+Selecting previously unselected package libuninameslist0.
+Preparing to unpack .../libuninameslist0_0.3.20130501-3_i386.deb ...
+Unpacking libuninameslist0 (0.3.20130501-3) ...
+Selecting previously unselected package fontforge-common.
+Preparing to unpack .../fontforge-common_20120731.b-5_all.deb ...
+Unpacking fontforge-common (20120731.b-5) ...
+Selecting previously unselected package libfontforge1.
+Preparing to unpack .../libfontforge1_20120731.b-5_i386.deb ...
+Unpacking libfontforge1 (20120731.b-5) ...
+Selecting previously unselected package libgdraw4.
+Preparing to unpack .../libgdraw4_20120731.b-5_i386.deb ...
+Unpacking libgdraw4 (20120731.b-5) ...
+Selecting previously unselected package fontforge.
+Preparing to unpack .../fontforge_20120731.b-5_i386.deb ...
+Unpacking fontforge (20120731.b-5) ...
+Selecting previously unselected package fonts-migmix.
+Preparing to unpack .../fonts-migmix_20130617-1_all.deb ...
+Unpacking fonts-migmix (20130617-1) ...
+Processing triggers for man-db (2.6.7.1-1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+Processing triggers for mime-support (3.56) ...
+Processing triggers for shared-mime-info (1.3-1) ...
+Unknown media type in type 'all/all'
+Unknown media type in type 'all/allfiles'
+Unknown media type in type 'uri/mms'
+Unknown media type in type 'uri/mmst'
+Unknown media type in type 'uri/mmsu'
+Unknown media type in type 'uri/pnm'
+Unknown media type in type 'uri/rtspt'
+Unknown media type in type 'uri/rtspu'
+Processing triggers for fontconfig (2.11.0-6.1) ...
+                            
+test@debian:~/debian-and-xmonad-Config$ sudo aptitude search inconsolata
+p   fonts-inconsolata               - monospace font for pretty code listings an
+test@debian:~/debian-and-xmonad-Config$ sudo aptitude install fonts-inconsolata
+The following NEW packages will be installed:
+  fonts-inconsolata 
+0 packages upgraded, 1 newly installed, 0 to remove and 92 not upgraded.
+Need to get 61.6 kB of archives. After unpacking 139 kB will be used.
+Get: 1 http://ftp.jp.debian.org/debian/ jessie/main fonts-inconsolata all 001.010-5 [61.6 kB]
+Fetched 61.6 kB in 0s (457 kB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+Selecting previously unselected package fonts-inconsolata.
+(Reading database ... 59402 files and directories currently installed.)
+Preparing to unpack .../fonts-inconsolata_001.010-5_all.deb ...
+Unpacking fonts-inconsolata (001.010-5) ...
+Processing triggers for fontconfig (2.11.0-6.1) ...
+                            
+test
+test@debian:~/debian-and-xmonad-Config$ 
+test@debian:~/debian-and-xmonad-Config$ 
+test@debian:~/debian-and-xmonad-Config$ 
+test@debian:~/debian-and-xmonad-Config$ 
+test@debian:~/debian-and-xmonad-Config$ cd ..
+test@debian:~$ mkdir -p ~/tmp/ricty
+test@debian:~$ cd ~/tmp/ricty
+test@debian:~/tmp/ricty$ ls -a
+.  ..
+test@debian:~/tmp/ricty$ wget https://raw.github.com/yascentur/Ricty/master/ricty_generator.sh
+--2014-09-18 00:21:38--  https://raw.github.com/yascentur/Ricty/master/ricty_generator.sh
+Resolving raw.github.com (raw.github.com)... 103.245.222.133
+Connecting to raw.github.com (raw.github.com)|103.245.222.133|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://raw.githubusercontent.com/yascentur/Ricty/master/ricty_generator.sh [following]
+--2014-09-18 00:21:39--  https://raw.githubusercontent.com/yascentur/Ricty/master/ricty_generator.sh
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 103.245.222.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|103.245.222.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 20114 (20K) [text/plain]
+Saving to: ‘ricty_generator.sh’
+
+100%[======================================>] 20,114      --.-K/s   in 0.02s   
+
+2014-09-18 00:21:39 (811 KB/s) - ‘ricty_generator.sh’ saved [20114/20114]
+
+test@debian:~/tmp/ricty$ sh ricty_generator.sh auto
+Ricty Generator 3.2.4b
+
+Author: Yasunori Yusa <lastname at save.sys.t.u-tokyo.ac.jp>
+
+This script is to generate ``Ricty'' font from Inconsolata and Migu 1M.
+It requires 2-5 minutes to generate Ricty. Owing to SIL Open Font License
+Version 1.1 section 5, it is PROHIBITED to distribute the generated font.
+
+trap: ERR: bad trap
+Generate modified Inconsolata.
+Find /usr/share/fonts/truetype/inconsolata/Inconsolata.otf.
+Save Modified-Inconsolata-Regular.sfd.
+While making Inconsolata bold, wait a little...
+Save Modified-Inconsolata-Bold.sfd.
+Generate modified Migu 1M.
+Find /usr/share/fonts/truetype/migmix/migu-1m-regular.ttf.
+While scaling migu-1m-regular.ttf, wait a little...
+Save Modified-migu-1m-regular.sfd.
+Find /usr/share/fonts/truetype/migmix/migu-1m-bold.ttf.
+While scaling migu-1m-bold.ttf, wait a little...
+Save Modified-migu-1m-bold.sfd.
+Generate Ricty.
+While merging Modified-Inconsolata-Regular.sfd with Modified-migu-1m-regular.sfd, wait a little...
+Save Ricty-Regular.ttf.
+While merging Modified-Inconsolata-Bold.sfd with Modified-migu-1m-bold.sfd, wait a little...
+Save Ricty-Bold.ttf.
+Remove temporary files.
+Succeeded in generating Ricty!
+test@debian:~/tmp/rict
+test@debian:~/tmp/ricty$ cd ~
+test@debian:~$ git clone https://github.com/usr4423/history.git
+Cloning into 'history'...
+remote: Counting objects: 38, done.        
+remote: Compressing objects: 100% (26/26), done.        
+remote: Total 38 (delta 13), reused 29 (delta 6)        
+Unpacking objects: 100% (38/38), done.
+Checking connectivity... done.
+test@debian:~$ cd history
+test@debian:~/history$ ls
+11-media-by-label-auto-mount.rules  99-xmodmap  install.log   README.md
+98-ibus                             githowto    install.log~  yet.log
+test@debian:~/history$ 
