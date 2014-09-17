@@ -1,0 +1,167 @@
+Welcome to the Emacs shell
+
+~ $ cabal install xmonad-contrib
+Resolving dependencies...
+Downloading data-default-class-0.0.1...
+Downloading dlist-0.7.1...
+Configuring dlist-0.7.1...
+Downloading extensible-exceptions-0.1.1.4...
+Downloading random-1.1...
+Configuring data-default-class-0.0.1...
+Downloading transformers-0.4.1.0...
+Configuring extensible-exceptions-0.1.1.4...
+Downloading utf8-string-0.3.8...
+Configuring random-1.1...
+Configuring utf8-string-0.3.8...
+Building extensible-exceptions-0.1.1.4...
+Building data-default-class-0.0.1...
+Building dlist-0.7.1...
+Building utf8-string-0.3.8...
+Building random-1.1...
+Configuring transformers-0.4.1.0...
+Building transformers-0.4.1.0...
+Installed data-default-class-0.0.1
+Downloading data-default-instances-base-0.0.1...
+Downloading data-default-instances-containers-0.0.1...
+Installed extensible-exceptions-0.1.1.4
+Installed dlist-0.7.1
+Downloading data-default-instances-old-locale-0.0.1...
+Configuring data-default-instances-containers-0.0.1...
+Building data-default-instances-containers-0.0.1...
+Configuring data-default-instances-base-0.0.1...
+Downloading data-default-instances-dlist-0.0.1...
+Building data-default-instances-base-0.0.1...
+Installed data-default-instances-containers-0.0.1
+Installed utf8-string-0.3.8
+Configuring data-default-instances-old-locale-0.0.1...
+Installed data-default-instances-base-0.0.1
+Building data-default-instances-old-locale-0.0.1...
+Installed random-1.1
+Configuring data-default-instances-dlist-0.0.1...
+Installed data-default-instances-old-locale-0.0.1
+Building data-default-instances-dlist-0.0.1...
+Installed data-default-instances-dlist-0.0.1
+Downloading data-default-0.5.3...
+Configuring data-default-0.5.3...
+Installed transformers-0.4.1.0
+Downloading mtl-2.2.1...
+Building data-default-0.5.3...
+Installed data-default-0.5.3
+Downloading X11-1.6.1.2...
+Configuring mtl-2.2.1...
+Building mtl-2.2.1...
+Installed mtl-2.2.1
+Configuring X11-1.6.1.2...
+Failed to install X11-1.6.1.2
+Build log ( /home/test/.cabal/logs/X11-1.6.1.2.log ):
+[1 of 1] Compiling Main             ( /tmp/X11-1.6.1.2-1262/X11-1.6.1.2/dist/setup/setup.hs, /tmp/X11-1.6.1.2-1262/X11-1.6.1.2/dist/setup/Main.o )
+Linking /tmp/X11-1.6.1.2-1262/X11-1.6.1.2/dist/setup/setup ...
+Configuring X11-1.6.1.2...
+configure: WARNING: unrecognized options: --with-compiler, --with-gcc
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for X... libraries , headers 
+checking for gethostbyname... yes
+checking for connect... yes
+checking for remove... yes
+checking for shmat... yes
+checking for IceConnectionNumber in -lICE... no
+checking whether to build Xinerama... yes
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking X11/extensions/Xinerama.h usability... yes
+checking X11/extensions/Xinerama.h presence... yes
+checking for X11/extensions/Xinerama.h... yes
+checking X11/extensions/Xrandr.h usability... no
+checking X11/extensions/Xrandr.h presence... no
+checking for X11/extensions/Xrandr.h... no
+configure: error: X11/extensions/Xrandr.h (from libXrandr) is required
+cabal: Error: some packages failed to install:
+X11-1.6.1.2 failed during the configure step. The exception was:
+ExitFailure 1
+X11-xft-0.3.1 depends on X11-1.6.1.2 which failed to install.
+xmonad-0.11 depends on X11-1.6.1.2 which failed to install.
+xmonad-contrib-0.11.3 depends on X11-1.6.1.2 which failed to install.
+~ $ exec xmonad >> ~/.xsession
+exec: command not found
+~ $ echo exec xmonad >> ~/.xsession
+~ $ cd history/
+~/history $ git add .
+~/history $ git commit -m "log3"
+On branch debian
+Your branch is up-to-date with 'origin/debian'.
+nothing to commit, working directory clean
+~/history $ git add .
+~/history $ git commit -m "log3"
+[debian 6cdc963] log3
+ Committer: test <test@debian>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 113 insertions(+)
+ create mode 120000 .#shelllog.debian.unstable3
+ create mode 100644 shelllog.debian.unstable3
+~/history $ git rm .\#shelllog.debian.unstable3 
+rm '.#shelllog.debian.unstable3'
+~/history $ git add .
+~/history $ git commit - "\#log3 delete"
+error: pathspec '-' did not match any file(s) known to git.
+error: pathspec '\#log3 delete' did not match any file(s) known to git.
+~/history $ git commit -m "\#log3 delete"
+[debian f437ca4] \#log3 delete
+ Committer: test <test@debian>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 deletion(-)
+ delete mode 120000 .#shelllog.debian.unstable3
+~/history $ git push -u origin debian
+Username for 'https://github.com': usr4423
+Password for 'https://usr4423@github.com': 
+Counting objects: 6, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 1.67 KiB | 0 bytes/s, done.
+Total 6 (delta 2), reused 0 (delta 0)
+To https://github.com/usr4423/history.git
+   e1cd63e..f437ca4  debian -> debian
+Branch debian set up to track remote branch debian from origin.
+~/history $ sudo shutdown -r now
+shutdown: command not found
+~/history $ sudo shutdown -r now
+shutdown: command not found
+~/history $ shutdown -r now

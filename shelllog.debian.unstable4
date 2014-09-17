@@ -1,0 +1,389 @@
+Welcome to the Emacs shell
+
+~/debian-and-xmonad-Config $ sudo aptitude install zsh
+The following NEW packages will be installed:
+  zsh zsh-common{a} 
+0 packages upgraded, 2 newly installed, 0 to remove and 126 not upgraded.
+Need to get 3744 kB of archives. After unpacking 12.9 MB will be used.
+Do you want to continue? [Y/n/?] 
+Get: 1 http://ftp.jp.debian.org/debian/ jessie/main zsh-common all 5.0.6-1 [3107 kB]
+Get: 2 http://ftp.jp.debian.org/debian/ jessie/main zsh i386 5.0.6-1 [637 kB]
+Fetched 3744 kB in 1s (1931 kB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+Selecting previously unselected package zsh-common.
+(Reading database ... 63842 files and directories currently installed.)
+Preparing to unpack .../zsh-common_5.0.6-1_all.deb ...
+Unpacking zsh-common (5.0.6-1) ...
+Selecting previously unselected package zsh.
+Preparing to unpack .../archives/zsh_5.0.6-1_i386.deb ...
+Unpacking zsh (5.0.6-1) ...
+Processing triggers for man-db (2.6.7.1-1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+Setting up zsh-common (5.0.6-1) ...
+Setting up zsh (5.0.6-1) ...
+update-alternatives: using /bin/zsh5 to provide /bin/zsh (zsh) in auto mode
+update-alternatives: using /bin/zsh5 to provide /bin/rzsh (rzsh) in auto mode
+                            
+~/debian-and-xmonad-Config $ sudo sh ./setup.sh 
+Installing Software ..
+deb http://cdn.debian.net/debian unstable main
+Hit http://cdn.debian.net unstable InRelease
+Hit http://ftp.jp.debian.org jessie InRelease
+Hit http://ftp.jp.debian.org jessie-updates InRelease
+Hit http://ftp.jp.debian.org jessie-backports InRelease
+Get:1 http://cdn.debian.net unstable/main i386 Packages/DiffIndex [7876 B]
+Get:2 http://ftp.jp.debian.org jessie/main Sources/DiffIndex [7876 B]
+Hit http://security.debian.org jessie/updates InRelease
+Get:3 http://cdn.debian.net unstable/main Translation-en/DiffIndex [7876 B]
+Get:4 http://ftp.jp.debian.org jessie/main i386 Packages/DiffIndex [7876 B]
+Get:5 http://ftp.jp.debian.org jessie/main Translation-en/DiffIndex [7876 B]
+Hit http://ftp.jp.debian.org jessie-updates/main Sources
+Hit http://ftp.jp.debian.org jessie-updates/main i386 Packages
+Hit http://ftp.jp.debian.org jessie-updates/main Translation-en
+Hit http://ftp.jp.debian.org jessie-backports/main Sources
+Hit http://ftp.jp.debian.org jessie-backports/main i386 Packages
+Hit http://ftp.jp.debian.org jessie-backports/main Translation-en
+Hit http://security.debian.org jessie/updates/main Sources
+Hit http://security.debian.org jessie/updates/main i386 Packages
+Hit http://security.debian.org jessie/updates/main Translation-en
+Fetched 39.4 kB in 2s (13.5 kB/s)
+Reading package lists... Done
+W: Duplicate sources.list entry http://cdn.debian.net/debian/ unstable/main i386 Packages (/var/lib/apt/lists/cdn.debian.net_debian_dists_unstable_main_binary-i386_Packages)
+W: Duplicate sources.list entry http://cdn.debian.net/debian/ unstable/main i386 Packages (/var/lib/apt/lists/cdn.debian.net_debian_dists_unstable_main_binary-i386_Packages)
+W: Duplicate sources.list entry http://cdn.debian.net/debian/ unstable/main i386 Packages (/var/lib/apt/lists/cdn.debian.net_debian_dists_unstable_main_binary-i386_Packages)
+W: You may want to run apt-get update to correct these problems
+./setup.sh: 8: ./setup.sh: cannot open apps: No such file
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 126 not upgraded.
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+iceweasel is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 126 not upgraded.
+Setting urxvt as default terminal emulator ..
+update-alternatives: error: alternative /usr/bin/urxvt for x-terminal-emulator not registered; not setting
+Getting patched font for Powerline ..
+--2014-09-18 02:15:58--  https://github.com/Lokaltog/powerline-fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf
+Resolving github.com (github.com)... 192.30.252.129
+Connecting to github.com (github.com)|192.30.252.129|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://raw.githubusercontent.com/Lokaltog/powerline-fonts/master/Inconsolata/Inconsolata%20for%20Powerline.otf [following]
+--2014-09-18 02:15:59--  https://raw.githubusercontent.com/Lokaltog/powerline-fonts/master/Inconsolata/Inconsolata%20for%20Powerline.otf
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 103.245.222.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|103.245.222.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 28828 (28K) [application/octet-stream]
+Saving to: 'Inconsolata for Powerline.otf'
+
+100%[======================================>] 28,828      --.-K/s   in 0.01s   
+
+2014-09-18 02:15:59 (2.61 MB/s) - 'Inconsolata for Powerline.otf' saved [28828/28828]
+
+/usr/share/fonts: caching, new cache contents: 1 fonts, 4 dirs
+/usr/share/fonts/X11: caching, new cache contents: 0 fonts, 3 dirs
+/usr/share/fonts/X11/encodings: caching, new cache contents: 0 fonts, 1 dirs
+/usr/share/fonts/X11/encodings/large: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/X11/misc: caching, new cache contents: 59 fonts, 0 dirs
+/usr/share/fonts/X11/util: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/cmap: caching, new cache contents: 0 fonts, 5 dirs
+/usr/share/fonts/cmap/adobe-cns1: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-gb1: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-japan1: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-japan2: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-korea1: caching, new cache contents: 0 fonts, 0 dirs
+/usr/share/fonts/truetype: caching, new cache contents: 0 fonts, 6 dirs
+/usr/share/fonts/truetype/custom: caching, new cache contents: 1 fonts, 0 dirs
+/usr/share/fonts/truetype/dejavu: caching, new cache contents: 21 fonts, 0 dirs
+/usr/share/fonts/truetype/droid: caching, new cache contents: 23 fonts, 0 dirs
+/usr/share/fonts/truetype/freefont: caching, new cache contents: 12 fonts, 0 dirs
+/usr/share/fonts/truetype/inconsolata: caching, new cache contents: 1 fonts, 0 dirs
+/usr/share/fonts/truetype/migmix: caching, new cache contents: 16 fonts, 0 dirs
+/usr/share/fonts/type1: caching, new cache contents: 0 fonts, 1 dirs
+/usr/share/fonts/type1/gsfonts: caching, new cache contents: 35 fonts, 0 dirs
+/usr/X11R6/lib/X11/fonts: skipping, no such directory
+/usr/local/share/fonts: caching, new cache contents: 0 fonts, 0 dirs
+/root/.local/share/fonts: skipping, no such directory
+/root/.fonts: skipping, no such directory
+/usr/share/fonts: caching, new cache contents: 1 fonts, 4 dirs
+/usr/X11R6/lib/X11/fonts: skipping, no such directory
+/usr/local/share/fonts: caching, new cache contents: 0 fonts, 0 dirs
+/root/.local/share/fonts: skipping, no such directory
+/root/.fonts: skipping, no such directory
+/var/cache/fontconfig: cleaning cache directory
+/root/.cache/fontconfig: not cleaning non-existent cache directory
+/root/.fontconfig: not cleaning non-existent cache directory
+fc-cache: succeeded
+Configuring ZSH and Prezto ..
+fatal: destination path '/root/.zprezto' already exists and is not an empty directory.
+Installing screenfetch ..
+--2014-09-18 02:16:03--  https://raw.github.com/KittyKatt/screenFetch/master/screenfetch-dev
+Resolving raw.github.com (raw.github.com)... 103.245.222.133
+Connecting to raw.github.com (raw.github.com)|103.245.222.133|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://raw.githubusercontent.com/KittyKatt/screenFetch/master/screenfetch-dev [following]
+--2014-09-18 02:16:04--  https://raw.githubusercontent.com/KittyKatt/screenFetch/master/screenfetch-dev
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 103.245.222.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|103.245.222.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 144176 (141K) [text/plain]
+Saving to: 'screenfetch'
+
+100%[======================================>] 144,176     --.-K/s   in 0.05s   
+
+2014-09-18 02:16:04 (2.82 MB/s) - 'screenfetch' saved [144176/144176]
+
+Pimping Vim ..
+fatal: destination path '/root/.vim/bundle/vundle' already exists and is not an empty directory.
+Installing basics for Haskell Dev ..
+Downloading the latest package list from hackage.haskell.org
+cabal: /root/.cabal/packages/hackage.haskell.org/00-index.tar1647.tmp:
+resource exhausted
+Applying personal configs ..
+Cloning into '/root/setup_tmp'...
+remote: Counting objects: 1535, done.        
+remote: Total 1535 (delta 0), reused 0 (delta 0)        
+Receiving objects: 100% (1535/1535), 20.27 MiB | 361.00 KiB/s, done.
+Resolving deltas: 100% (819/819), done.
+Checking connectivity... done.
+sending incremental file list
+./
+.Xdefaults
+.abcde.conf
+.fehbg
+.rsnapshot.conf
+.tmux.conf
+.urlview
+.vimperatorrc
+.vimrc
+.wallpaper
+.xinitrc
+.config/
+.config/htop/
+.config/htop/htoprc
+.conky/
+.conky/conkyrc
+.ghc/
+.ghc/ghci.conf
+.mutt/
+.mutt/certificates
+.mutt/mailcap
+.mutt/muttrc
+.ncmpcpp/
+.ncmpcpp/config
+.newsbeuter/
+.newsbeuter/config
+.newsbeuter/urls
+.unison/
+.unison/raspi.prf
+.vim/
+.vim/vundlerc
+.vimperator/
+.vimperator/colors/
+.vimperator/colors/zenburn.vimp
+.vimperator/plugin/
+.vimperator/plugin/noscript.js
+.weechat/
+.weechat/weechat.conf
+.xmonad/
+.xmonad/xmonad.hs
+.xmonad/bin/
+.xmonad/bin/autostart.sh
+.xmonad/bin/conkybar.sh
+.xmonad/bin/getVolume.sh
+.xmonad/bin/musicbar.sh
+.xmonad/xbm/
+.xmonad/xbm/README
+.xmonad/xbm/ac.xbm
+.xmonad/xbm/ac_01.xbm
+.xmonad/xbm/arch.xbm
+.xmonad/xbm/arch_10x10.xbm
+.xmonad/xbm/art.xbm
+.xmonad/xbm/bat_empty_01.xbm
+.xmonad/xbm/bat_empty_02.xbm
+.xmonad/xbm/bat_full_01.xbm
+.xmonad/xbm/bat_full_02.xbm
+.xmonad/xbm/bat_low_01.xbm
+.xmonad/xbm/bat_low_02.xbm
+.xmonad/xbm/battery.xbm
+.xmonad/xbm/battery10.xbm
+.xmonad/xbm/battery20.xbm
+.xmonad/xbm/battery30.xbm
+.xmonad/xbm/battery40.xbm
+.xmonad/xbm/battery50.xbm
+.xmonad/xbm/battery60.xbm
+.xmonad/xbm/battery70.xbm
+.xmonad/xbm/battery80.xbm
+.xmonad/xbm/battery90.xbm
+.xmonad/xbm/bluetooth.xbm
+.xmonad/xbm/bug_01.xbm
+.xmonad/xbm/bug_02.xbm
+.xmonad/xbm/calendar.xbm
+.xmonad/xbm/cat.xbm
+.xmonad/xbm/clock.xbm
+.xmonad/xbm/code.xbm
+.xmonad/xbm/corner.xbm
+.xmonad/xbm/corner_left.xbm
+.xmonad/xbm/corner_right.xbm
+.xmonad/xbm/cpu.xbm
+.xmonad/xbm/dish.xbm
+.xmonad/xbm/diskette.xbm
+.xmonad/xbm/docs.xbm
+.xmonad/xbm/empty.xbm
+.xmonad/xbm/eye_l.xbm
+.xmonad/xbm/eye_r.xbm
+.xmonad/xbm/fox.xbm
+.xmonad/xbm/fs_01.xbm
+.xmonad/xbm/fs_02.xbm
+.xmonad/xbm/full (1).xbm
+.xmonad/xbm/full.xbm
+.xmonad/xbm/fwd.xbm
+.xmonad/xbm/games.xbm
+.xmonad/xbm/grid.xbm
+.xmonad/xbm/half.xbm
+.xmonad/xbm/icons.tar.gz
+.xmonad/xbm/info_01.xbm
+.xmonad/xbm/info_02.xbm
+.xmonad/xbm/info_03.xbm
+.xmonad/xbm/lan.xbm
+.xmonad/xbm/layout_focus.xbm
+.xmonad/xbm/layout_full.xbm
+.xmonad/xbm/layout_grid.xbm
+.xmonad/xbm/layout_mirror_tall.xbm
+.xmonad/xbm/layout_mtall.xbm
+.xmonad/xbm/layout_tabbed.xbm
+.xmonad/xbm/layout_tall.xbm
+.xmonad/xbm/mail.xbm
+.xmonad/xbm/media.xbm
+.xmonad/xbm/mem.xbm
+.xmonad/xbm/mouse_01.xbm
+.xmonad/xbm/music.xbm
+.xmonad/xbm/net_down_01.xbm
+.xmonad/xbm/net_down_02.xbm
+.xmonad/xbm/net_down_03.xbm
+.xmonad/xbm/net_up_01.xbm
+.xmonad/xbm/net_up_02.xbm
+.xmonad/xbm/net_up_03.xbm
+.xmonad/xbm/net_wired.xbm
+.xmonad/xbm/next.xbm
+.xmonad/xbm/note.xbm
+.xmonad/xbm/pacman.xbm
+.xmonad/xbm/pause.xbm
+.xmonad/xbm/phones.xbm
+.xmonad/xbm/pics.xbm
+.xmonad/xbm/play.xbm
+.xmonad/xbm/playpause.xbm
+.xmonad/xbm/plug.xbm
+.xmonad/xbm/prev.xbm
+.xmonad/xbm/rwd.xbm
+.xmonad/xbm/scorpio.xbm
+.xmonad/xbm/shroom.xbm
+.xmonad/xbm/spkr_01.xbm
+.xmonad/xbm/spkr_02.xbm
+.xmonad/xbm/spkr_03.xbm
+.xmonad/xbm/stop.xbm
+.xmonad/xbm/tall.xbm
+.xmonad/xbm/temp.xbm
+.xmonad/xbm/term.xbm
+.xmonad/xbm/test.xbm
+.xmonad/xbm/time.xbm
+.xmonad/xbm/usb.xbm
+.xmonad/xbm/usb_02.xbm
+.xmonad/xbm/volume0.xbm
+.xmonad/xbm/volume100.xbm
+.xmonad/xbm/volume25.xbm
+.xmonad/xbm/volume50.xbm
+.xmonad/xbm/volume75.xbm
+.xmonad/xbm/wifi.xbm
+.xmonad/xbm/wifi_01.xbm
+.xmonad/xbm/wifi_02.xbm
+.xmonad/xbm/wireless1.xbm
+.xmonad/xbm/wireless2.xbm
+.xmonad/xbm/wireless3.xbm
+.xmonad/xbm/wireless4.xbm
+.xmonad/xbm/wireless5.xbm
+.xmonad/xbm/www.xbm
+.xmonad/xbm/xbm8x8/
+.xmonad/xbm/xbm8x8/README
+.xmonad/xbm/xbm8x8/ac.xbm
+.xmonad/xbm/xbm8x8/ac_01.xbm
+.xmonad/xbm/xbm8x8/arch.xbm
+.xmonad/xbm/xbm8x8/arch_10x10.xbm
+.xmonad/xbm/xbm8x8/bat_empty_01.xbm
+.xmonad/xbm/xbm8x8/bat_empty_02.xbm
+.xmonad/xbm/xbm8x8/bat_full_01.xbm
+.xmonad/xbm/xbm8x8/bat_full_02.xbm
+.xmonad/xbm/xbm8x8/bat_low_01.xbm
+.xmonad/xbm/xbm8x8/bat_low_02.xbm
+.xmonad/xbm/xbm8x8/bluetooth.xbm
+.xmonad/xbm/xbm8x8/bug_01.xbm
+.xmonad/xbm/xbm8x8/bug_02.xbm
+.xmonad/xbm/xbm8x8/cat.xbm
+.xmonad/xbm/xbm8x8/clock.xbm
+.xmonad/xbm/xbm8x8/cpu.xbm
+.xmonad/xbm/xbm8x8/dish.xbm
+.xmonad/xbm/xbm8x8/diskette.xbm
+.xmonad/xbm/xbm8x8/empty.xbm
+.xmonad/xbm/xbm8x8/eye_l.xbm
+.xmonad/xbm/xbm8x8/eye_r.xbm
+.xmonad/xbm/xbm8x8/fox.xbm
+.xmonad/xbm/xbm8x8/fs_01.xbm
+.xmonad/xbm/xbm8x8/fs_02.xbm
+.xmonad/xbm/xbm8x8/full.xbm
+.xmonad/xbm/xbm8x8/fwd.xbm
+.xmonad/xbm/xbm8x8/half.xbm
+.xmonad/xbm/xbm8x8/info_01.xbm
+.xmonad/xbm/xbm8x8/info_02.xbm
+.xmonad/xbm/xbm8x8/info_03.xbm
+.xmonad/xbm/xbm8x8/mail.xbm
+.xmonad/xbm/xbm8x8/mem.xbm
+.xmonad/xbm/xbm8x8/mouse_01.xbm
+.xmonad/xbm/xbm8x8/net_down_01.xbm
+.xmonad/xbm/xbm8x8/net_down_02.xbm
+.xmonad/xbm/xbm8x8/net_down_03.xbm
+.xmonad/xbm/xbm8x8/net_up_01.xbm
+.xmonad/xbm/xbm8x8/net_up_02.xbm
+.xmonad/xbm/xbm8x8/net_up_03.xbm
+.xmonad/xbm/xbm8x8/net_wired.xbm
+.xmonad/xbm/xbm8x8/next.xbm
+.xmonad/xbm/xbm8x8/note.xbm
+.xmonad/xbm/xbm8x8/pacman.xbm
+.xmonad/xbm/xbm8x8/pause.xbm
+.xmonad/xbm/xbm8x8/phones.xbm
+.xmonad/xbm/xbm8x8/play.xbm
+.xmonad/xbm/xbm8x8/plug.xbm
+.xmonad/xbm/xbm8x8/prev.xbm
+.xmonad/xbm/xbm8x8/rwd.xbm
+.xmonad/xbm/xbm8x8/scorpio.xbm
+.xmonad/xbm/xbm8x8/shroom.xbm
+.xmonad/xbm/xbm8x8/spkr_01.xbm
+.xmonad/xbm/xbm8x8/spkr_02.xbm
+.xmonad/xbm/xbm8x8/spkr_03.xbm
+.xmonad/xbm/xbm8x8/stop.xbm
+.xmonad/xbm/xbm8x8/temp.xbm
+.xmonad/xbm/xbm8x8/test.xbm
+.xmonad/xbm/xbm8x8/usb.xbm
+.xmonad/xbm/xbm8x8/usb_02.xbm
+.xmonad/xbm/xbm8x8/wifi_01.xbm
+.xmonad/xbm/xbm8x8/wifi_02.xbm
+.zprezto/
+.zprezto/runcoms/
+.zprezto/runcoms/.zprofile
+.zprezto/runcoms/zpreztorc
+.zprezto/runcoms/zshrc
+bin/
+bin/mount_container.sh
+bin/umount_container.sh
+
+sent 8.49M bytes  received 4.03K bytes  16.98M bytes/sec
+total size is 8.47M  speedup is 1.00
+.fehbg: 1: .fehbg: feh: not found
+Installing Vim Plugins ..
+./setup.sh: 48: ./setup.sh: vim: not found
+Setup finished! Please reboot!
+~/debian-and-xmonad-Config $ 
