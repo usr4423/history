@@ -175,3 +175,16 @@ sudo systemctl enable dhcpcd.service
 ping -c 3 www.google.com
 systemctl list-unit-files
 sudo shutdown -r now
+ps
+ps -a
+exec sudo -u root -s -H -p Password:
+sudo cp /etc/udev/rules.d/11-media-by-label-auto-mount.rules ~/history/
+cd history/
+updatedb
+sudo updatedb
+sudo cp /etc/X11/xinit/xinitrc.d/9* ~/history/
+su
+yaourt xorg-xbacklight
+sudo cd /sys/devices/virtual/
+cd Desktop/
+su
