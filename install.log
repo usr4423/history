@@ -114,8 +114,29 @@ $yaourt ibus
 $yaourt ibus morzc
 $yaourt ibus skk
 
+emacsをダウンロード(すでにアップロード済み)して, フォルダを移動させる
+$cd git.emacs.d/
+$cp *.el ~/.emacs.d/
+$cp -a ~/Downloads/<file name>/ac-dict ~/.emacs.d/
+$cp -a ~/Downloads/<file name>/elisp ~/.emacs.d/
+$cp -a ~/Downloads/<file name>/yspel ~/.emacs.d/
+$cp -a ~/Downloads/<file name>/elpa ~/.emacs.d/
+$cp -a ~/Downloads/<file name>/eshell ~/.emacs.d/
+$cp -a ~/Downloads/<file name>/undohist ~/.emacs.d/
+$cp -a ~/Downloads/<file name>/extra-scripts ~/.emacs.d/
+$cp -a ~/Downloads/<file name>/snippets ~/.emacs.d/
+$cp -a ~/Downloads/<file name>/latexmk* ~/.emacs.d/
 
+aspellを入れわすれていた
+$yaourt aspell
 
+設定ファイルを移動させる
+$git clone git://github.com/usr4423/linuxsetting
+$cp .aspell.* ~/
+$cp .latexmkrc ~/
+
+xmonadの設定ファイルを置くフォルダを作る.
+$mkdir .xmonad
 
 xmonadのdefaultの設定ファイルを探した.
 $sudo locate xmonad.hs
