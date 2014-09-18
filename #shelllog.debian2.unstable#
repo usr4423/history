@@ -4472,4 +4472,6 @@ drwxr-xr-x   8 test           test       4096 2014-09-18 09:53 .git
 -rw-r--r--   1 test           test       4400 2014-09-18 09:53 shelllog.debian.unstable3
 -rw-r--r--   1 test           test      14871 2014-09-18 09:53 shelllog.debian.unstable4
 -rw-r--r--   1 test           test        565 2014-09-18 09:52 yet.log
-~/history $ 
+~/history $ rm ls\ -al\~
+~/history $ git add .
+~/history $ git commit -m "debian2
