@@ -142,6 +142,7 @@ xmonadのdefaultの設定ファイルを探した.
 $sudo locate xmonad.hs
 
 http://oku.edu.mie-u.ac.jp/tex/mod/forum/discuss.php?d=1120を参考にしてpxdviのインストールをする
+
 $mkdir pxdvi
 $cd pxdvi
 $curl -O http://www.tug.org/~preining/tlptexlive/archive/pxdvi.tar.xz
@@ -154,3 +155,53 @@ $sudo cp -pR texmf-dist/xdvi /usr/share/texmf-dist/pxdvi
 $sudo cp -pR texmf-dist/fonts/map/pxdvi /usr/share/texmf-dist/fonts/map/pxdvi
 $sudo mkdir -p /usr/share/texmf-local/web2c
 $sudo cp /usr/share/texmf-dist/web2c/texmf.cnf /usr/share/texmf-local/web2c
+
+/usr/share/texmf-local/web2c/texmf.cnf に以下を書き込む
+
+% pxdvi
+XDVIINPUTS = /usr/share/texmf-dist/pxdvi
+
+.latexmkrcのdviの部分をpxdviに変更しておきます.
+
+platex で処理された DVI ファイルが表示できる．
+$ pxdvi -watchfile 1 hoge.dvi &
+
+
+http://mytexpert.sourceforge.jp/index.php?TeX%A4%CE%BA%C7%B6%E1%A4%CE%C6%B0%B8%FEを参考にして, 導入
+$sudo pacman -S poppler poppler-data
+$sudo pacman -S evince
+
+~/.config/fontconfig/fonts.conf を編集します．
+
+>>>>>>>>>fonts.conf
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+<dir>/usr/local/texlive/2014/texmf-dist/fonts/truetype/public/ipaex</dir>
+<dir>/usr/share/texlive/texmf-dist/fonts/truetype/public/ipaex</dir>
+<dir>/usr/share/texmf-dist/fonts/truetype/public/ipaex</dir>
+<dir>/usr/share/texmf/fonts/truetype/public/ipaex</dir>
+
+<match target="pattern">
+<test qual="any" name="family">
+<string>Ryumin</string>
+</test>
+<edit name="family" mode="prepend" binding="strong">
+<string>IPAexMincho</string>
+</edit>
+</match>
+<match target="pattern">
+<test qual="any" name="family">
+<string>GothicBBB</string>
+</test>
+<edit name="family" mode="prepend" binding="strong">
+<string>IPAexGothic</string>
+</edit>
+</match>
+
+</fontconfig>
+
+<<<<<<<<<<<<<
+
+nkfを導入
+yaourt nkf 
